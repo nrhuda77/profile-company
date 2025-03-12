@@ -115,7 +115,7 @@ function sign()
    {
        $('#btnSave').text('Memeriksa...'); //change button text
        $('#btnSave').attr('disabled',true); //set button disable 
-       var url = '/login';
+       var url = '/login-recruitment';
     
        // ajax adding data to database
        var formData = new FormData($('#form')[0]);
