@@ -35,7 +35,7 @@
                 <div class="col-lg-6">
                     <h6 class="text-primary text-uppercase" style="color: #035A8F !important">// About Us //</h6>
                     <h1 class="mb-4"><span class="text-primary" style="color: #0b0b0b !important">PT</span> <span style="color: #035A8F !important">Biru Arnawama Timur</span></h1>
-                    <p class="mb-4">Perseroan Terbatas (PT) Biru Arnawama Timur didirikan oleh Putra Daerah Sangkulirang, Dr. Irwan, M.P., dengan fokus pada layanan kepelabuhanan. Perusahaan ini bertujuan untuk mendukung perkembangan infrastruktur pelabuhan di Kalimantan Timur, khususnya di wilayah Sangatta Utara, Kabupaten Kutai Timur. Dengan dedikasi tinggi, PT Biru Arnawama Timur berkomitmen memberikan pelayanan profesional untuk mendukung aktif dalam pembangunan ekonomi daerah.</p>
+                    <p class="mb-4">Perseroan Terbatas (PT) Biru Arnawama Timur didirikan di Sangkulirang, dengan fokus pada layanan kepelabuhanan. Perusahaan ini bertujuan untuk mendukung perkembangan infrastruktur pelabuhan di Kalimantan Timur, khususnya di wilayah Sangatta Utara, Kabupaten Kutai Timur. Dengan dedikasi tinggi, PT Biru Arnawama Timur berkomitmen memberikan pelayanan profesional untuk mendukung aktif dalam pembangunan ekonomi daerah.</p>
                  
                     
                 </div>

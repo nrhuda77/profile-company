@@ -1,127 +1,211 @@
-<!DOCTYPE html>
+
+
+
+<!doctype html>
 <html lang="en">
   <head>
-    <title>Login Recruitment</title>
+  	<title>Recruitment BAT</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('assets/login/fonts/icomoon/style.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/login/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/login/css/jquery-ui.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/login/css/owl.carousel.min.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/login/css/owl.theme.default.min.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/login/css/jquery.fancybox.min.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/login/css/bootstrap-datepicker.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/login/fonts/flaticon/font/flaticon.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/login/css/aos.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/login/css/style.css')}}">
-    <style>
-      .error-message {
-        color: red !important;
-        font-size: 12px;
-      }
-    </style>
-  </head>
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-    <div class="site-wrap">
-      <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
-        <div class="container-fluid">
-          <div class="d-flex align-items-center">
-            <img class="" style="width: 145px !important; " src="{{asset('assets/img/logo_bat_edited.png')}}">
-            <div class="ml-auto w-25">
-              <nav class="site-navigation position-relative text-right" role="navigation">
-                <ul class="site-menu main-menu site-menu-dark js-clone-nav mr-auto d-none d-lg-block m-0 p-0"></ul>
-              </nav>
-              <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a>
-            </div>
-          </div>
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+  <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="{{asset('assets/login-form/css/style.css')}}">
+  <link href="{{asset('assets/css/style.css')}}" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+	</head>
+	<body>
+    <!-- Login 5 - Bootstrap Brain Component -->
+
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg bg-white navbar-light shadow p-3" style="position: sticky !important; top: 0 !important; z-index: 9999 !important;">
+    <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+    <img src="{{asset('assets/img/logo_bat_edited.png')}}" width="150px" alt="" srcset="">
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a href="/" class="nav-item nav-link {{ request()->is('/') ? 'active' : ''}} {{ request()->is('home') ? 'active' : ''}}">Home</a>
+            <a href="/about" class="nav-item nav-link {{ request()->is('about') ? 'active' : ''}}">About</a>
+            <a href="/service" class="nav-item nav-link {{ request()->is('service') ? 'active' : ''}}">Services</a>
+            <a href="/contact" class="nav-item nav-link {{ request()->is('contact') ? 'active' : ''}}">Contact</a>
+            <a href="/login" target="_blank" class="nav-item nav-link {{ request()->is('login') ? 'active' : ''}}">Recruitment</a>
         </div>
-      </header>
-
-      <div class="intro-section" id="home-section">
-        <div class="slide-1" style="background-image: url('{{asset('assets/img/-1x-1.jpg')}}');" data-stellar-background-ratio="0.5">
-          <div class="container">
-            <div class="row align-items-center">
-              <div class="col-12">
-                <div class="row align-items-center">
-                  <div class="col-lg-6 mb-4">
-                    <h1 data-aos="fade-up" data-aos-delay="100">Rekrutmen PT Biru Arnawama Timur</h1>
-                    <p class="mb-4" data-aos="fade-up" data-aos-delay="200">Selamat Datang Rekrutment PT Biru Arnawama Timur Silahkan daftar jika belum memiliki akun, atau Login jika sudah memiliki akun </p>
-                  </div>
-
-                  <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="500">
-                    <form class="login100-form validate-form" action="" method="POST">
-                      <h3 class="h4 mb-4">Registrasi</h3>
-                      <div class="form-group">
-                        <span>Nama</span>
-                        <input type="text" class="form-control" placeholder="Masukan Nama" name="nama" autocomplete="off">
-                      </div>
-
-                      <div class="form-group">
-                        <span>Email</span>
-                        <input type="email" class="form-control" placeholder="Masukan Email" name="email" autocomplete="off">
-                      </div>
-
-                      <div class="form-group">
-                        <span>Password</span>
-                        <input type="password" class="form-control" placeholder="Masukan Password" name="pass" id="password" autocomplete="off">
-                      </div>
-
-                      <div class="form-group">
-                        <span>Konfirmasi Password</span>
-                        <input type="password" class="form-control" placeholder="Masukan Ulang Password" name="pass2" id="confirm-password" autocomplete="off">
-                        <p class="error-message" id="error-message" style="display: none;">Password tidak sama</p>
-                      </div>
-
-                      <div class="form-group">
-                        <p>Sudah Punya Akun? <a href="/login">Login</a></p>
-                      </div>
-
-                      <div class="form-group">
-                        <button type="submit" class="btn btn-primary btn-pill" id="submit-btn" disabled>
-                          Registrasi
-                        </button>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+        <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block" style="background-color: #035A8F; border-color: #035A8F;">LIBAT<i class="fa fa-arrow-right ms-3"></i></a>
     </div>
+</nav>
+<!-- Navbar End -->
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-12 col-lg-12">
+					<div class="wrap d-md-flex">
+						<div class="img" style="background-image: url('https://stockwatch.id/wp-content/uploads/2024/06/TCPI07Jun24.jpg'); ">
+			      </div>
+						<div class="login-wrap p-4 p-md-5">
+			      	<div class="mb-3">	      	
+			      			<h3 >Hai, Selamat Datang!</h3>
+                  <h6 class="text-dark">Silakan daftar untuk membuat akun Anda.</h6>
+			      	</div>
+							<form action="/create-register" method="POST" id="myForm" class="signin-form">
+                @csrf
+			      		<div class="form-group mb-3">
+                  <div class="d-flex justify-content-start">
+                    <div class="mr-3">
+                      <label class="label" for="nama">Nama</label>
+                      <input type="text" name="nama" class="form-control" placeholder="Nama" required size="25">
+                    </div>
+                    <div>
+                      <label class="label" for="telp">No Telepon</label>
+                      <input type="text" name="telp" class="form-control" placeholder="No Telepon" required  size="25">
+                    </div>
+                  </div>
+			      		</div>
 
-    <script src="{{asset('assets/login/js/jquery-3.3.1.min.js')}}"></script>
-    <script src="{{asset('assets/login/js/jquery-migrate-3.0.1.min.js')}}"></script>
-    <script src="{{asset('assets/login/js/jquery-ui.js')}}"></script>
-    <script src="{{asset('assets/login/js/popper.min.js')}}"></script>
-    <script src="{{asset('assets/login/js/bootstrap.min.js')}}"></script>
-    <script src="{{asset('assets/login/js/owl.carousel.min.js')}}"></script>
-    <script src="{{asset('assets/login/js/jquery.stellar.min.js')}}"></script>
-    <script src="{{asset('assets/login/js/jquery.countdown.min.js')}}"></script>
-    <script src="{{asset('assets/login/js/bootstrap-datepicker.min.js')}}"></script>
-    <script src="{{asset('assets/login/js/jquery.easing.1.3.js')}}"></script>
-    <script src="{{asset('assets/login/js/aos.js')}}"></script>
-    <script src="{{asset('assets/login/js/jquery.fancybox.min.js')}}"></script>
-    <script src="{{asset('assets/login/js/jquery.sticky.js')}}"></script>
-    <script src="{{asset('assets/login/js/main.js')}}"></script>
+                <div class="form-group mb-3">
+                  <div class="d-flex justify-content-start">
+                    <div class="mr-3">
+                      <label class="label" for="nama">Email</label>
+                      <input type="email" id="email" name="email" class="form-control" placeholder="Email" required size="25">
+                    </div>
+                    
+                    <div>
+                      <label class="label" for="telp">Tanggal Lahir</label>
+                      <input type="date" name="tgl_lahir" class="form-control" placeholder="Tanggal Lahir" required  size="25">
+                    </div>
+                  </div>
+                  <p id="error-messages" style="color: red;"></p>
+			      		</div>
 
-    <script>
-      $(document).ready(function() {
-        $('#confirm-password').on('input', function() {
-          var password = $('#password').val();
-          var confirmPassword = $('#confirm-password').val();
+                <div class="form-group mb-3">
+                  <div class="d-flex justify-content-start">
+                    <div class="mr-3">
+                      <label class="label" for="password">Password</label>
+                      <div class="d-flex">
+                        <input type="password" name="password" id="password" class="form-control" placeholder="Password" required size="25">
+                        <span class="input-group-text" id="toggle-password">
+                          <i class="fas fa-eye-slash" id="eye-icon"></i>
+                      </span>
+                      </div>
+                      </div>
 
-          if (password !== confirmPassword) {
-            $('#error-message').show();
-            $('#submit-btn').prop('disabled', true);
-          } else {
-            $('#error-message').hide();
-            $('#submit-btn').prop('disabled', false);
-          }
-        });
-      });
-    </script>
-  </body>
+                    <div>
+                      <label class="label" for="telp">Konfirmasi Password</label>
+                      <div class="d-flex">
+                      <input type="password" name="confirm_password" id="confirm_password" class="form-control" placeholder="Konfirmasi Password" required  size="25">
+                      <span class="input-group-text" id="toggle-password2">
+                        <i class="fas fa-eye-slash" id="eye-icon2"></i>
+                    </span>
+                     
+                    </div>
+                    <span class="error-message text-danger" id="error-message" style="display: none;">Password tidak sama <i class="fas fa-exclamation-circle"></i></span>
+                   </div>
+                  </div>     		
+			      		</div>
+
+
+                <div class="text-left mb-2">
+                  <a href="#">Forgot Password</a>
+                </div>
+		            <div class="form-group">
+		            	<button type="submit" id="submit-btn" disabled class="form-control btn btn-primary rounded submit px-3" style="background-color: #035A8F !important;">Sign In</button>
+		            </div>
+		            <div class="form-group d-md-flex">
+		            	<div class="text-left">
+                    <p class="text-dark">Sudah memiliki akun? <a data-toggle="tab" class="text-primary" href="/login">Masuk disini</a></p>
+									</div>
+									{{--  --}}
+                  
+		            </div>
+                
+		          </form>
+		      
+		        </div>
+		      </div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	</body>
 </html>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+
+<script>
+  $(document).ready(function() {
+    $('#confirm_password').on('input', function() {
+      var password = $('#password').val();
+      var confirmPassword = $('#confirm_password').val();
+
+      if (password !== confirmPassword) {
+        $('#error-message').show();
+        $('#submit-btn').prop('disabled', true);
+      } else {
+        $('#error-message').hide();
+        $('#submit-btn').prop('disabled', false);
+      }
+    });
+  });
+
+  document.getElementById('toggle-password').addEventListener('click', function () {
+    var passwordField = document.getElementById('password');
+    var eyeIcon = document.getElementById('eye-icon');
+    
+    // Toggle the type attribute
+    if (passwordField.type === "password") {
+        passwordField.type = "text"; // Tampilkan password
+        eyeIcon.classList.remove('fas', 'fa-eye-slash'); // Hapus class fa-eye-slash
+        eyeIcon.classList.add('fas', 'fa-eye'); // Tambahkan class fa-eye
+    } else {
+        passwordField.type = "password"; // Sembunyikan password
+        eyeIcon.classList.remove('fas', 'fa-eye'); // Hapus class fa-eye
+        eyeIcon.classList.add('fas', 'fa-eye-slash'); // Tambahkan class fa-eye-slash
+    }
+});
+
+document.getElementById('toggle-password2').addEventListener('click', function () {
+    var passwordField = document.getElementById('confirm_password');
+    var eyeIcon = document.getElementById('eye-icon2');
+    
+    // Toggle the type attribute
+    if (passwordField.type === "password") {
+        passwordField.type = "text"; // Tampilkan password
+        eyeIcon.classList.remove('fas', 'fa-eye-slash'); // Hapus class fa-eye-slash
+        eyeIcon.classList.add('fas', 'fa-eye'); // Tambahkan class fa-eye
+    } else {
+        passwordField.type = "password"; // Sembunyikan password
+        eyeIcon.classList.remove('fas', 'fa-eye'); // Hapus class fa-eye
+        eyeIcon.classList.add('fas', 'fa-eye-slash'); // Tambahkan class fa-eye-slash
+    }
+});
+
+$(document).ready(function() {
+    $('#email').on('input', function() {
+        var email = $(this).val();
+        
+        // Ekspresi reguler untuk memvalidasi format email
+        var emailPattern = /^[a-zA-Z0-9._-]+@[a-zAZ0-9.-]+\.[a-zA-Z]{2,4}$/;
+        
+        if (!emailPattern.test(email)) {
+            // Jika email tidak valid, tampilkan pesan kesalahan
+            $('#error-messages').text('Email tidak valid!');
+        } else {
+            // Jika email valid, hilangkan pesan kesalahan
+            $('#error-messages').text('');
+        }
+    });
+});
+
+
+</script>
+
+   
+  </body>
+</html> 

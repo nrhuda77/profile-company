@@ -17,9 +17,9 @@ return [
         'guard' => 'web',
         'passwords' => 'users',
     ],
-    'karyawan'=>[
-        'driver'=>'eloquent',
-        'model'=>App\Models\Karyawan::class,
+    'pelamar'=>[
+        'guard' => 'pelamar',
+        'passwords' => 'pelamar',
      ],
 
 
@@ -45,18 +45,11 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
-        'api' => [
-            'driver' => 'jwt',
-            'provider' => 'users',
-        ],
-        'karyawan' => [
+        'pelamar' => [
             'driver' => 'session',
-            'provider' => 'karyawan',
+            'provider' => 'pelamar',
         ],
-        'api-karyawan' => [
-            'driver' => 'jwt',
-            'provider' => 'karyawan',
-        ],
+     
     ],
 
 
@@ -82,15 +75,10 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
         ],
-        'karyawan' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\Karyawan::class,
-        ],
-
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+        'pelamar'=>[
+            'driver'=>'eloquent',
+            'model'=>App\Models\Pelamar::class,
+         ],
     ],
 
     /*
@@ -115,9 +103,9 @@ return [
             'expire' => 60,
             'throttle' => 60,
         ],
-        'karyawan'=>[
+        'pelamar'=>[
             'driver'=>'eloquent',
-            'model'=>App\Models\Karyawan::class,
+            'model'=>App\Models\Pelamar::class,
          ],
     ],
 
