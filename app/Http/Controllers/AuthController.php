@@ -42,7 +42,7 @@ class AuthController extends Controller
     
         $request->session()->regenerateToken();
     
-        return redirect('/login');
+        return redirect('/login-recruitment');
     }
 
     public function store(Request $request){
@@ -66,7 +66,7 @@ class AuthController extends Controller
                 'email' => $request->email
             ]);
         }
-        return redirect('/login');
+        return redirect('/login-recruitment');
       
     }
 }

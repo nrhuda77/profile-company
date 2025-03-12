@@ -12,7 +12,7 @@
             <a href="/about" class="nav-item nav-link {{ request()->is('about') ? 'active' : ''}}">About</a>
             <a href="/service" class="nav-item nav-link {{ request()->is('service') ? 'active' : ''}}">Services</a>
             <a href="/contact" class="nav-item nav-link {{ request()->is('contact') ? 'active' : ''}}">Contact</a>
-            <a href="/login" target="_blank" class="nav-item nav-link {{ request()->is('login') ? 'active' : ''}}">Recruitment</a>
+            <a href="/login-recruitment" target="_blank" class="nav-item nav-link {{ request()->is('login') ? 'active' : ''}}">Recruitment</a>
         </div>
         <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block" style="background-color: #035A8F; border-color: #035A8F;">LIBAT<i class="fa fa-arrow-right ms-3"></i></a>
     </div>

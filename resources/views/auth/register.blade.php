@@ -116,7 +116,7 @@
 		            </div>
 		            <div class="form-group d-md-flex">
 		            	<div class="text-left">
-                    <p class="text-dark">Sudah memiliki akun? <a data-toggle="tab" class="text-primary" href="/login">Masuk disini</a></p>
+                    <p class="text-dark">Sudah memiliki akun? <a data-toggle="tab" class="text-primary" href="/login-recruitment">Masuk disini</a></p>
 									</div>
 									{{--  --}}
                   

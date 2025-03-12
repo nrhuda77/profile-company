@@ -20,10 +20,10 @@
                       </li>
 
                       <li class="">
-                        <a class="" href="/logout" aria-expanded="false"><i class="fas fa-arrow-right" onclick="event.preventDefault();document.getElementById('logout-form').submit();"></i>
+                        <a class=""  aria-expanded="false"><i class="fas fa-arrow-right" onclick="event.preventDefault();document.getElementById('logout-form').submit();"></i>
                           <span class="nav-text">Log Out</span>
                         </a>
-                        <form id="logout-form" action="/logout" method="POST" class="dropdown-item">
+                        <form id="logout-form" action="/logout-recruitment" method="POST" class="dropdown-item">
                           @csrf
                       </form>
                       </li>

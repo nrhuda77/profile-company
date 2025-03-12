@@ -37,11 +37,11 @@ Route::get('/recruitment', function () {
     return view('recruitment/index');
 });
 
-Route::get('/login', [AuthController::class, 'login']);
-Route::get('/register', [AuthController::class, 'register']);
+Route::get('/login-recruitment', [AuthController::class, 'login']);
+Route::get('/register-recruitment', [AuthController::class, 'register']);
 Route::post('/create-register', [AuthController::class, 'store']);
-Route::post('/login', [AuthController::class, 'authenticate'])->name('login');
-Route::get('/logout', [AuthController::class, 'logout']);
+Route::post('/login-recruitment', [AuthController::class, 'authenticate'])->name('login');
+Route::get('/logout-recruitment', [AuthController::class, 'logout']);
 
 Route::get('/dashboard', [PelamarController::class, 'dashboard'])->middleware('auth:pelamar');
 Route::get('/lamaran-pekerjaan', [PelamarController::class, 'index'])->middleware('auth:pelamar');
